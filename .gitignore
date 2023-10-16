@@ -1,0 +1,26 @@
+# Visual Studio / Rider / ReSharper
+.vscode/
+.vs/
+.idea/
+*.suo
+*.user
+*.sln.docstates
+
+# Binaries
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.log
+*.zip
+*.nupkg
+*.sqlite
+
+# User-specific files
+*.suo
+*.user
+*.sln.docstates
+
+# Visual Studio Code directories
+.vscode/
