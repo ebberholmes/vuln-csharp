@@ -7,7 +7,7 @@ class Program
     static void Main()
     {
         string userInput = GetUserInput(); // User-provided input (e.g., from a form or query parameter)
-        string query = "SELECT * FROM Users WHERE Username = @username"; // Use a parameterized query
+        string query = "SELECT * FROM Users WHERE Username = '" + userInput + "';"; // Use a parameterized query
 
         // Define the connection string
         string connectionString = "Server=your-server;Database=your-database;User Id=your-username;Password=your-password;";
@@ -20,8 +20,6 @@ class Program
             // Create a SQL command
             using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
             {
-                sqlCommand.Parameters.AddWithValue("@username", userInput); // Add user input as a parameter
-
                 // Execute the query
                 using (SqlDataReader reader = sqlCommand.ExecuteReader())
                 {
